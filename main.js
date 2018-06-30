@@ -17,14 +17,14 @@ function createWindow () {
   mainSession.on('will-download', (e, downloadItem, webContents) => {
 
     let size = downloadItem.getTotalBytes();
-    let file = downloadItem.getFilename();
+    let filePath = path + downloadItem.getFilename();
     
-    downloadItem.setSavePath(path + file);
+    downloadItem.setSavePath(filePath);
     
     downloadItem.on('updated', (e, state) => {
       let progress = Math.round((downloadItem.getReceivedBytes() / size) * 100)
       if (state === 'progressing') {
-        mainWindow.webContents.send('dwn',  progress);
+        mainWindow.webContents.send('dwn',  {"prog": progress, "path": filePath} );
       }
     }) 
   mainWindow.on('closed', function () {

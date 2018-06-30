@@ -8,16 +8,18 @@ myBar.hidden = true;
 dwnBtn.addEventListener('click', () => {
     dwnBtn.hidden = true;
     myBar.hidden = false;
-    active.removeAttribute("style")
-    active.style.cursor = 'auto';
-    ipcRenderer.on('dwn', (e, prog) => {
-    move(prog);
+    
+    ipcRenderer.on('dwn', (e, info) => {
+    move(info.prog);
 
     function move(val) {
             myBar.style.width = val + '%'; 
             myBar.innerHTML = val + '%';
             if (val === 100) {
                 myBar.hidden = true;
+                active.removeAttribute("style");
+                active.style.cursor = 'auto';
+                active.setAttribute('href', info.path);
             };
       };
     });
