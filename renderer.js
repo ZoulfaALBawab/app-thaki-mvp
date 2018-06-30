@@ -8,7 +8,8 @@ myBar.hidden = true;
 dwnBtn.addEventListener('click', () => {
     dwnBtn.hidden = true;
     myBar.hidden = false;
-    active.style.color = '#799830';
+    active.removeAttribute("style")
+    active.style.cursor = 'auto';
     ipcRenderer.on('dwn', (e, prog) => {
     move(prog);
 

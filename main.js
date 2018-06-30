@@ -7,7 +7,7 @@ let path = "/home/" + user + "/Downloads/";
 let mainWindow;
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 1200, height: 800})
+  mainWindow = new BrowserWindow({width: 1200, height: 750})
 
   let mainSession = mainWindow.webContents.session;
 

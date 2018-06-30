@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html style="width: auto">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Thaki</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">  
   <link rel="stylesheet" type="text/css" href="a.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<body>
+<body class="container-fluid">
+      
 
 
-
-<div class="row">
-  <div class="column1">
-    
+<div class="row" style="height:100vh">
+  <div class="column1" style="height:100vh">
+    <img src="./images/columnimg.png"><br><br>
     <a href="#" style="text-decoration: none"><h4>Material #1</h4></a>
     <a href="#" style="text-decoration: none"><h4>Material #2</h4></a>
     <a href="#" style="text-decoration: none"><h4>Material #3</h4></a>
@@ -21,7 +23,7 @@
     <a href="#" style="text-decoration: none"><h4>Material #5</h4></a>
 
   </div>
-  <div class="column2">
+  <div class="column2" style="height:100vh">
     <h2>Content #1</h2>
     <a href="#" style="text-decoration: none"><h3>Subcontent #1</h3></a>
     <a href="#" style="text-decoration: none"><h3>Subcontent #2</h3></a>
@@ -29,21 +31,18 @@
     <h2>Content #2</h2>
     <a href="#" style="text-decoration: none"><h3>Subcontent #1</h3></a>
     <a href="#" style="text-decoration: none"><h3>Subcontent #2</h3></a>
-    <a href="#" style="text-decoration: none"><h3 id="active" style="color: gray">Subcontent #3</h3></a>
-
-    <!-- <button class="btn btn-success" style="float: right;">
-      <i class="fa fa-download" aria-hidden="true"></i> Download
-    </button>
-      <br></br> -->
-    <button class="btn btn-success" style="float: right;"><a style="color: ghostwhite" href="http://rbk.org/ito/a5.psd">Download</a>
+    <div class="row">
+    <a  class="col-sm-6" href="#" style="text-decoration: none; cursor: not-allowed"><h3 id="active" style="color: gray">Subcontent #3</h3></a>
+      <div class="col-sm-2"></div>
+    <button class="btn btn-success col-sm-4" style=" min-width: 110px; max-width: 150px; max-height: 40px"><a style="color: ghostwhite" src="http://rbk.org/ito/a5.psd">Download </a> 
       <i class="fa fa-download" aria-hidden="true"></i> 
-
     </button>
       <div id="myProgress">
       <div id="myBar"></div>
     </div>
   </div>
 </div>
+
 <script>
       // You can also require other files to run in this process
       require('./renderer.js')
